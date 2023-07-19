@@ -20,17 +20,17 @@ if (isset($_GET['generate']) && isset($_GET['length'])) {
 <!-- Head -->
 <?php include __DIR__ . '/includes/layouts/head.php' ?>
 
-<body>
+<body class="bg-dark">
     <main class="container text-center mt-5">
-        <h1>Strong Password Generator</h1>
+        <h1 class="text-white">Strong Password Generator</h1>
         <section id="password_generator">
             <form action="" method="GET">
                 <div class=" mt-4">
-                    <label for="length">Password length:</label>
+                    <label class="text-white me-3" for="length">Password length:</label>
                     <input type="number" id="length" name="length" min="1" max="20" required>
                 </div>
                 <div class="mt-5">
-                    <button class="btn btn-primary ms-4" type="submit" name="generate">Send</button>
+                    <button class="btn btn-primary me-2" type="submit" name="generate">Send</button>
                     <button class="btn btn-secondary" type="reset" name="cancel">Cancel</button>
                 </div>
             </form>

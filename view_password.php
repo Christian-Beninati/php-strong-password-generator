@@ -15,12 +15,13 @@ if (isset($_SESSION['generated_password'])) {
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Head -->
 <?php include __DIR__ . '/includes/layouts/head.php' ?>
 
 
-<body>
+<body class="bg-dark">
     <main class="container text-center mt-5">
-        <h1>Generated Password</h1>
+        <h1 class="text-white">Generated Password</h1>
         <div class="alert alert-primary mt-4" role="alert">
             Your generated password is: <?= $generated_password; ?>
         </div>
