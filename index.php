@@ -1,12 +1,15 @@
 <?php
 include __DIR__ . '/includes/utils/functions.php';
 
+session_start();
+
 $page_title = 'PHP Strong Password Generator';
 $password = '';
 
 if (isset($_GET['generate']) && isset($_GET['length'])) {
     $length = $_GET['length'];
-    $password = generatePassword($length);
+    $_SESSION['generated_password'] = generatePassword($length);
+    header('Location: view_password.php');
 }
 ?>
 
@@ -37,9 +40,6 @@ if (isset($_GET['generate']) && isset($_GET['length'])) {
                     <button class="btn btn-secondary" type="reset" name="cancel">Cancel</button>
                 </div>
             </form>
-            <div class="alert alert-primary mt-4" role="alert">
-                Your generated password is: <?= $password; ?>
-            </div>
         </section>
     </main>
 </body>
