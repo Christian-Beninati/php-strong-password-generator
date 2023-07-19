@@ -1,24 +1,12 @@
 <?php
+include __DIR__ . '/includes/utils/functions.php';
+
 $page_title = 'PHP Strong Password Generator';
 $password = '';
 
 if (isset($_GET['generate']) && isset($_GET['length'])) {
     $length = $_GET['length'];
     $password = generatePassword($length);
-}
-
-function generatePassword($length)
-{
-    $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()';
-    $password = '';
-    $charCount = strlen($characters);
-
-    for ($i = 0; $i < $length; $i++) {
-        $index = rand(0, $charCount - 1);
-        $password .= $characters[$index];
-    }
-
-    return $password;
 }
 ?>
 
