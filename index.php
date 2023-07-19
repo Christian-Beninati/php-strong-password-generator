@@ -8,7 +8,7 @@ $password = '';
 
 if (isset($_GET['generate']) && isset($_GET['length'])) {
     $length = $_GET['length'];
-    $_SESSION['generated_password'] = generatePassword($length);
+    $_SESSION['generated_password'] = generate_password($length);
     header('Location: view_password.php');
 }
 ?>

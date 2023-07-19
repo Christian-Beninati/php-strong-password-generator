@@ -5,7 +5,6 @@ if (isset($_SESSION['generated_password'])) {
     $generated_password = $_SESSION['generated_password'];
     unset($_SESSION['generated_password']);
 } else {
-    // Se la password non è presente nella sessione, reindirizza all'index o a una pagina di errore.
     header('Location: index.php');
 }
 ?>
