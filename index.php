@@ -49,6 +49,9 @@ function generatePassword($length)
                     <button class="btn btn-secondary" type="reset" name="cancel">Cancel</button>
                 </div>
             </form>
+            <div class="alert alert-primary mt-4" role="alert">
+                Your generated password is: <?= $password; ?>
+            </div>
         </section>
     </main>
 </body>
